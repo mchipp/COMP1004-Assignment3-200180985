@@ -16,7 +16,7 @@ namespace COMP1004_Assignment3_200180985
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SelectionForm());
         }
     }
 }

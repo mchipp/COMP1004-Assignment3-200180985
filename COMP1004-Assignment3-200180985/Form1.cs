@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace COMP1004_Assignment3_200180985
 {
-    public partial class Form1 : Form
+    public partial class SelectionForm : Form
     {
-        public Form1()
+        public SelectionForm()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
