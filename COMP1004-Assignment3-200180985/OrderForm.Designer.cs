@@ -38,6 +38,8 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.DVDLabel = new System.Windows.Forms.Label();
+            this.DVDTextBox = new System.Windows.Forms.TextBox();
             this.OrderDVDButton = new System.Windows.Forms.CheckBox();
             this.GrandTotalLabel = new System.Windows.Forms.Label();
             this.SalesTaxLabel = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.DVDLabel = new System.Windows.Forms.Label();
-            this.DVDTextBox = new System.Windows.Forms.TextBox();
             this.MainMenuStrip.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MovieArtPictureBox)).BeginInit();
@@ -161,6 +161,28 @@
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
             // 
+            // DVDLabel
+            // 
+            this.DVDLabel.AutoSize = true;
+            this.DVDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DVDLabel.Location = new System.Drawing.Point(115, 108);
+            this.DVDLabel.Name = "DVDLabel";
+            this.DVDLabel.Size = new System.Drawing.Size(44, 20);
+            this.DVDLabel.TabIndex = 10;
+            this.DVDLabel.Text = "DVD";
+            this.DVDLabel.Visible = false;
+            // 
+            // DVDTextBox
+            // 
+            this.DVDTextBox.BackColor = System.Drawing.Color.White;
+            this.DVDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DVDTextBox.Location = new System.Drawing.Point(172, 105);
+            this.DVDTextBox.Name = "DVDTextBox";
+            this.DVDTextBox.ReadOnly = true;
+            this.DVDTextBox.Size = new System.Drawing.Size(100, 26);
+            this.DVDTextBox.TabIndex = 9;
+            this.DVDTextBox.Visible = false;
+            // 
             // OrderDVDButton
             // 
             this.OrderDVDButton.AutoSize = true;
@@ -254,7 +276,6 @@
             // 
             // BackButton
             // 
-            this.BackButton.Enabled = false;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.Location = new System.Drawing.Point(333, 372);
             this.BackButton.Name = "BackButton";
@@ -265,7 +286,6 @@
             // 
             // StreamButton
             // 
-            this.StreamButton.Enabled = false;
             this.StreamButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StreamButton.Location = new System.Drawing.Point(572, 372);
             this.StreamButton.Name = "StreamButton";
@@ -276,7 +296,6 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Enabled = false;
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButton.Location = new System.Drawing.Point(482, 372);
             this.CancelButton.Name = "CancelButton";
@@ -284,28 +303,6 @@
             this.CancelButton.TabIndex = 7;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            // 
-            // DVDLabel
-            // 
-            this.DVDLabel.AutoSize = true;
-            this.DVDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DVDLabel.Location = new System.Drawing.Point(115, 108);
-            this.DVDLabel.Name = "DVDLabel";
-            this.DVDLabel.Size = new System.Drawing.Size(44, 20);
-            this.DVDLabel.TabIndex = 10;
-            this.DVDLabel.Text = "DVD";
-            this.DVDLabel.Visible = false;
-            // 
-            // DVDTextBox
-            // 
-            this.DVDTextBox.BackColor = System.Drawing.Color.White;
-            this.DVDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DVDTextBox.Location = new System.Drawing.Point(172, 105);
-            this.DVDTextBox.Name = "DVDTextBox";
-            this.DVDTextBox.ReadOnly = true;
-            this.DVDTextBox.Size = new System.Drawing.Size(100, 26);
-            this.DVDTextBox.TabIndex = 9;
-            this.DVDTextBox.Visible = false;
             // 
             // OrderForm
             // 

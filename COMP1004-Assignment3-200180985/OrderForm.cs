@@ -25,12 +25,63 @@ namespace COMP1004_Assignment3_200180985
 
             GetProgramInfo();
             SubTotalTextBox.Text = Program.info.Cost.ToString("C2");
-            SalesTaxTextBox.Text = (Convert.ToDouble(double.Parse(CostTextBox.Text, NumberStyles.Currency)) * 0.13).ToString("C2");
+            DVDTextBox.Text = 0.ToString("C2");
+            CalculatSubTotal();
+            CalculateSalesTax();
+            CalculateGrandTotal();
+        }
 
+        //////////////////EVENT HANDLERS//////////////////
+
+        /// <summary>
+        /// Handles checking and unchecking the Order DVD button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OrderDVDButton_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isChecked = OrderDVDButton.Checked == true ? true : false;
+
+            DVDTextBox.Text = isChecked ? 10.ToString("C2") : 0.ToString("C2");
+
+            CalculatSubTotal();
+            CalculateSalesTax();
+            CalculateGrandTotal();
+
+            DVDLabel.Visible = isChecked;
+            DVDTextBox.Visible = isChecked;
+        }
+
+        //////////////////FUNCTIONS//////////////////
+
+        /// <summary>
+        /// Calculates sales tax value
+        /// </summary>
+        private void CalculateSalesTax()
+        {
+            SalesTaxTextBox.Text = (Convert.ToDouble(double.Parse(SubTotalTextBox.Text, NumberStyles.Currency)) * 0.13).ToString("C2");
         }
 
         /// <summary>
-        /// Retrieve informaiton from program info to fill in form fields
+        /// Calculates sub total value
+        /// </summary>
+        private void CalculatSubTotal()
+        {
+            SubTotalTextBox.Text = (Program.info.Cost + Convert.ToDouble(double.Parse(DVDTextBox.Text, NumberStyles.Currency))).ToString("C2");
+        }
+
+        /// <summary>
+        /// Calculates grand total value
+        /// </summary>
+        private void CalculateGrandTotal()
+        {
+            double subTotal = Convert.ToDouble(double.Parse(SubTotalTextBox.Text, NumberStyles.Currency));
+            double salesTax = Convert.ToDouble(double.Parse(SalesTaxTextBox.Text, NumberStyles.Currency));
+            GrandTotalTextbox.Text = (subTotal + salesTax).ToString("C2");
+        }
+
+        /// <summary>
+        /// Retrieve information from program info to fill in form fields
         /// </summary>
         private void GetProgramInfo()
         {
@@ -38,17 +89,6 @@ namespace COMP1004_Assignment3_200180985
             CategoryTextBox.Text = Program.info.Category;
             CostTextBox.Text = Program.info.Cost.ToString("C2");
             MovieArtPictureBox.BackgroundImage = Program.info.Poster;
-        }
-
-        private void OrderDVDButton_CheckedChanged(object sender, EventArgs e)
-        {
-            bool isChecked = OrderDVDButton.Checked == true ? true : false;
-
-            DVDTextBox.Text = "$10.00";
-            SubTotalTextBox.Text = (Program.info.Cost + Convert.ToDouble(double.Parse(DVDTextBox.Text, NumberStyles.Currency))).ToString("C2");
-
-            DVDLabel.Visible = isChecked;
-            DVDTextBox.Visible = isChecked;
         }
     }
 }
