@@ -1,6 +1,7 @@
 ﻿/// Program Name: Assignment 3
 /// File Name: SelectionForm.cs
 /// Author: Mark Chipp 200180985
+/// Created: 7-Nov-2016
 /// Description: Users may pick a movie to stream online from a pre-defined list of movies.
 /// Optionally they can purchase a DVD for any film offered.
 
@@ -17,6 +18,8 @@ using System.Windows.Forms;
 
 namespace COMP1004_Assignment3_200180985
 {
+    //////////////////CLASSES//////////////////
+
     public partial class SelectionForm : Form
     {
         private List<Movie> _movieList = new List<Movie>();
@@ -38,7 +41,7 @@ namespace COMP1004_Assignment3_200180985
 
             // populate the list box with movie titles from the movie list
             foreach (Movie movie in _movieList)
-            {
+            { 
                 CurrentMoviesListBox.Items.Add(movie.Title);
             }
 

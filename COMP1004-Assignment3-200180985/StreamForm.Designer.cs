@@ -50,9 +50,8 @@
             this.CreditCardChargeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreditCardChargeLabel.Location = new System.Drawing.Point(25, 41);
             this.CreditCardChargeLabel.Name = "CreditCardChargeLabel";
-            this.CreditCardChargeLabel.Size = new System.Drawing.Size(259, 16);
+            this.CreditCardChargeLabel.Size = new System.Drawing.Size(0, 16);
             this.CreditCardChargeLabel.TabIndex = 2;
-            this.CreditCardChargeLabel.Text = "Your credit card will be charged [x dollars].";
             // 
             // MovieWillBeginLabel
             // 
@@ -60,9 +59,8 @@
             this.MovieWillBeginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MovieWillBeginLabel.Location = new System.Drawing.Point(24, 72);
             this.MovieWillBeginLabel.Name = "MovieWillBeginLabel";
-            this.MovieWillBeginLabel.Size = new System.Drawing.Size(249, 16);
+            this.MovieWillBeginLabel.Size = new System.Drawing.Size(0, 16);
             this.MovieWillBeginLabel.TabIndex = 3;
-            this.MovieWillBeginLabel.Text = "[Your movie] will begin streaming shortly.";
             // 
             // OkButton
             // 

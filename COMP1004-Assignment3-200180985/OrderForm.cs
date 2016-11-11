@@ -1,6 +1,7 @@
 ﻿/// Program Name: Assignment 3
 /// File Name: OrderForm.cs
 /// Author: Mark Chipp 200180985
+/// Created: 7-Nov-2016
 /// Description: Users may pick a movie to stream online from a pre-defined list of movies.
 /// Optionally they can purchase a DVD for any film offered.
 
@@ -17,6 +18,8 @@ using System.Windows.Forms;
 
 namespace COMP1004_Assignment3_200180985
 {
+    //////////////////CLASSES//////////////////
+
     public partial class OrderForm : Form
     {
         public SelectionForm previousForm { get; set; }
@@ -66,11 +69,21 @@ namespace COMP1004_Assignment3_200180985
             previousForm.Show();
         }
 
+        /// <summary>
+        /// Handles tool strip menu cancel option click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cancel();
         }
 
+        /// <summary>
+        /// Handles cancel button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Cancel();
@@ -152,6 +165,9 @@ namespace COMP1004_Assignment3_200180985
         /// </summary>
         private void Stream()
         {
+            // store the total cost to be displayed on the stream confirmation form.
+            Program.info.GrandTotalCost = GrandTotalTextbox.Text;
+
             StreamForm streamForm = new StreamForm();
             streamForm.previousForm = this;
             this.Hide();
