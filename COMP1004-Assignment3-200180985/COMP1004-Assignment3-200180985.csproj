@@ -46,16 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Movie.cs" />
+    <Compile Include="MovieInfo.cs" />
+    <Compile Include="SelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SelectionForm.Designer.cs">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StreamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StreamForm.Designer.cs">
+      <DependentUpon>StreamForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionForm.resx">
+      <DependentUpon>SelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +88,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StreamForm.resx">
+      <DependentUpon>StreamForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +108,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bladerunner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daryl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serenity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sgarkoftruth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sgcontinuum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shortcircuit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stargate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thedaytheearthstoodstill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thefifthelement.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
