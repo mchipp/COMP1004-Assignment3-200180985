@@ -56,6 +56,7 @@ namespace COMP1004_Assignment3_200180985
         private void NextButton_Click(object sender, EventArgs e)
         {
             OrderForm orderForm = new OrderForm();
+            orderForm.previousForm = this;
             this.Hide();
             orderForm.Show();
         }

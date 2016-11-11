@@ -19,6 +19,8 @@ namespace COMP1004_Assignment3_200180985
 {
     public partial class OrderForm : Form
     {
+        public SelectionForm previousForm { get; set; }
+
         public OrderForm()
         {
             InitializeComponent();
@@ -50,6 +52,28 @@ namespace COMP1004_Assignment3_200180985
 
             DVDLabel.Visible = isChecked;
             DVDTextBox.Visible = isChecked;
+        }
+
+        /// <summary>
+        /// Handles back button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            previousForm.Show();
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Cancel();
         }
 
         //////////////////FUNCTIONS//////////////////
@@ -89,6 +113,49 @@ namespace COMP1004_Assignment3_200180985
             CategoryTextBox.Text = Program.info.Category;
             CostTextBox.Text = Program.info.Cost.ToString("C2");
             MovieArtPictureBox.BackgroundImage = Program.info.Poster;
+        }
+
+        ////////////////EVENT HANDLERS////////////////
+
+        /// <summary>
+        /// Handler for stream button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StreamButton_Click(object sender, EventArgs e)
+        {
+            Stream();
+        }
+
+        /// <summary>
+        /// Handler for stream menu click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void streamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stream();
+        }
+
+        /// <summary>
+        /// Cancel function handles shared application closing
+        /// </summary>
+        private void Cancel()
+        {
+            Application.Exit();
+        }
+
+        ////////////////FUNCTIONS////////////////
+
+        /// <summary>
+        /// Stream function handles shared stream button and menu options
+        /// </summary>
+        private void Stream()
+        {
+            StreamForm streamForm = new StreamForm();
+            streamForm.previousForm = this;
+            this.Hide();
+            streamForm.Show();
         }
     }
 }

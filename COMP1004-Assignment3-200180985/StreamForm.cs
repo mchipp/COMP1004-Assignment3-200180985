@@ -18,6 +18,8 @@ namespace COMP1004_Assignment3_200180985
 {
     public partial class StreamForm : Form
     {
+        public OrderForm previousForm { get; set; }
+
         public StreamForm()
         {
             InitializeComponent();
